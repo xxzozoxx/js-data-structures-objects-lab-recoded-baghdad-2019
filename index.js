@@ -9,13 +9,13 @@ function destructivelyUpdateDriverWithKeyAndValue(obj,key,value){
  
   return obj;
 }
-function deleteFromDriverByKey(obj,key){
-
-    return delete obj.key;
-}
-function destructivelyDeleteFromDriverByKey(obj,key,value){
-  let newobj = Object.assign({}, obj, { [key]: value });
+function deleteFromDriverByKey(obj,key,value){
+ let newobj = Object.assign({}, obj, { [key]: value });
   delete newobj[key];
   return newobj;
-  
+    
+}
+function destructivelyDeleteFromDriverByKey(obj,key){
+ 
+  return delete obj.key;
 }
